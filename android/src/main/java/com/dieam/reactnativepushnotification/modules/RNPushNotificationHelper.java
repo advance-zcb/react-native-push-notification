@@ -172,6 +172,7 @@ public class RNPushNotificationHelper {
         }
 
         Log.d(LOG_TAG, String.format("Setting a notification with id %s at time %s",
+                bundle.getString("id"), Long.toString(fireDate)));
         getAlarmManager().set(AlarmManager.RTC_WAKEUP, fireDate, pendingIntent);
     }
 
